@@ -33,7 +33,6 @@ Kurulum tamamlandıktan sonra aşağıdaki adresleri kullanarak servislere eriş
 
 - WordPress: http://localhost:8081
 - Portainer: https://localhost:9443
-- FTP Sunucusu: Port 2121
 
 ## Ortam Değişkenleri
 
