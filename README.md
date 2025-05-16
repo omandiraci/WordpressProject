@@ -19,7 +19,7 @@ Projeyi çalıştırmak için aşağıdaki yazılımların bilgisayarınızda ku
 
 1. Projeyi bilgisayarınıza klonlayın:
 ```bash
-git clone ttps://github.com/omandiraci/WordpressProject.git
+git clone https://github.com/omandiraci/WordpressProject.git
 ```
 
 2. Proje dizinine gidin ve konteynerleri başlatın:
