@@ -6,7 +6,6 @@ Bu proje, Docker tabanlı bir WordPress geliştirme ortamı içerir ve aşağıd
 - MariaDB (Veritabanı)
 - Nginx (Web Sunucusu)
 - PHP-FPM (PHP Yorumlayıcı)
-- FTP Sunucusu (Dosya Transfer Protokolü)
 - Portainer (Docker Yönetim Arayüzü)
 
 ## Gereksinimler
