@@ -1,0 +1,76 @@
+2025/04/18 09:22:46 [notice] 1#1: using the "epoll" event method
+2025/04/18 09:22:46 [notice] 1#1: nginx/1.27.4
+2025/04/18 09:22:46 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/04/18 09:22:46 [notice] 1#1: OS: Linux 6.8.0-57-generic
+2025/04/18 09:22:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/04/18 09:22:46 [notice] 1#1: start worker processes
+2025/04/18 09:22:46 [notice] 1#1: start worker process 27
+2025/04/18 09:22:46 [notice] 1#1: start worker process 28
+2025/04/18 09:32:59 [warn] 28#28: *38 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/1/00/0000000001 while reading upstream, client: 192.168.64.1, server: localhost, request: "GET /wp-admin/load-styles.php?c=0&dir=ltr&load%5Bchunk_0%5D=dashicons,admin-bar,site-health,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-poi&load%5Bchunk_1%5D=nter,widgets,site-icon,l10n,buttons,wp-auth-check&ver=6.8 HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "192.168.64.3:8081", referrer: "http://192.168.64.3:8081/wp-admin/"
+2025/04/18 09:34:19 [warn] 28#28: *56 an upstream response is buffered to a temporary file /var/cache/nginx/fastcgi_temp/2/00/0000000002 while reading upstream, client: 192.168.64.1, server: localhost, request: "GET /wp-admin/load-styles.php?c=0&dir=ltr&load%5Bchunk_0%5D=dashicons,admin-bar,common,forms,admin-menu,dashboard,list-tables,edit,revisions,media,themes,about,nav-menus,wp-pointer,widgets&load%5Bchunk_1%5D=,site-icon,l10n,buttons,wp-auth-check&ver=6.8 HTTP/1.1", upstream: "fastcgi://172.19.0.2:9000", host: "192.168.64.3:8081", referrer: "http://192.168.64.3:8081/wp-admin/edit.php?post_type=post"
+2025/04/18 11:59:18 [notice] 1#1: using the "epoll" event method
+2025/04/18 11:59:18 [notice] 1#1: nginx/1.27.4
+2025/04/18 11:59:18 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/04/18 11:59:18 [notice] 1#1: OS: Linux 6.8.0-57-generic
+2025/04/18 11:59:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/04/18 11:59:18 [notice] 1#1: start worker processes
+2025/04/18 11:59:18 [notice] 1#1: start worker process 28
+2025/04/18 11:59:18 [notice] 1#1: start worker process 29
+2025/04/26 13:32:36 [notice] 1#1: using the "epoll" event method
+2025/04/26 13:32:36 [notice] 1#1: nginx/1.27.5
+2025/04/26 13:32:36 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/04/26 13:32:36 [notice] 1#1: OS: Linux 6.10.14-linuxkit
+2025/04/26 13:32:36 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/04/26 13:32:36 [notice] 1#1: start worker processes
+2025/04/26 13:32:36 [notice] 1#1: start worker process 27
+2025/04/26 13:32:36 [notice] 1#1: start worker process 28
+2025/04/26 13:32:36 [notice] 1#1: start worker process 29
+2025/04/26 13:32:36 [notice] 1#1: start worker process 30
+2025/04/26 13:42:25 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/04/26 13:42:25 [notice] 28#28: gracefully shutting down
+2025/04/26 13:42:25 [notice] 27#27: gracefully shutting down
+2025/04/26 13:42:25 [notice] 30#30: gracefully shutting down
+2025/04/26 13:42:25 [notice] 29#29: gracefully shutting down
+2025/04/26 13:42:25 [notice] 30#30: exiting
+2025/04/26 13:42:25 [notice] 28#28: exiting
+2025/04/26 13:42:25 [notice] 30#30: exit
+2025/04/26 13:42:25 [notice] 27#27: exiting
+2025/04/26 13:42:25 [notice] 29#29: exiting
+2025/04/26 13:42:25 [notice] 28#28: exit
+2025/04/26 13:42:25 [notice] 27#27: exit
+2025/04/26 13:42:25 [notice] 29#29: exit
+2025/04/26 13:42:25 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2025/04/26 13:42:25 [notice] 1#1: worker process 27 exited with code 0
+2025/04/26 13:42:25 [notice] 1#1: worker process 28 exited with code 0
+2025/04/26 13:42:25 [notice] 1#1: worker process 29 exited with code 0
+2025/04/26 13:42:25 [notice] 1#1: worker process 30 exited with code 0
+2025/04/26 13:42:25 [notice] 1#1: exit
+2025/04/28 14:58:13 [notice] 1#1: using the "epoll" event method
+2025/04/28 14:58:13 [notice] 1#1: nginx/1.27.5
+2025/04/28 14:58:13 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/04/28 14:58:13 [notice] 1#1: OS: Linux 6.10.14-linuxkit
+2025/04/28 14:58:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/04/28 14:58:13 [notice] 1#1: start worker processes
+2025/04/28 14:58:13 [notice] 1#1: start worker process 28
+2025/04/28 14:58:13 [notice] 1#1: start worker process 29
+2025/04/28 14:58:13 [notice] 1#1: start worker process 30
+2025/04/28 14:58:13 [notice] 1#1: start worker process 31
+2025/04/29 06:29:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/04/29 06:29:48 [notice] 28#28: gracefully shutting down
+2025/04/29 06:29:48 [notice] 29#29: gracefully shutting down
+2025/04/29 06:29:48 [notice] 31#31: gracefully shutting down
+2025/04/29 06:29:48 [notice] 30#30: gracefully shutting down
+2025/04/29 06:29:48 [notice] 28#28: exiting
+2025/04/29 06:29:48 [notice] 29#29: exiting
+2025/04/29 06:29:48 [notice] 31#31: exiting
+2025/04/29 06:29:48 [notice] 30#30: exiting
+2025/04/29 06:29:48 [notice] 28#28: exit
+2025/04/29 06:29:48 [notice] 30#30: exit
+2025/04/29 06:29:48 [notice] 29#29: exit
+2025/04/29 06:29:48 [notice] 31#31: exit
+2025/04/29 06:29:48 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2025/04/29 06:29:48 [notice] 1#1: worker process 28 exited with code 0
+2025/04/29 06:29:48 [notice] 1#1: worker process 29 exited with code 0
+2025/04/29 06:29:48 [notice] 1#1: worker process 30 exited with code 0
+2025/04/29 06:29:48 [notice] 1#1: worker process 31 exited with code 0
+2025/04/29 06:29:48 [notice] 1#1: exit
