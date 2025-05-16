@@ -52,4 +52,4 @@ Bu proje, Alpine tabanlı Docker imajlarını kullanmaktadır. Alpine imajları,
 2. Yeni bir özellik branch'i oluşturun (`git checkout -b yeni-ozellik`)
 3. Değişikliklerinizi commit edin (`git commit -am 'Yeni özellik eklendi'`)
 4. Branch'inizi push edin (`git push origin yeni-ozellik`)
-5. Pull Request oluşturun
+5. Pull Request oluşturun.
