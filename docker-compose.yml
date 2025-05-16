@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   nginx:
     image: nginx:alpine
@@ -41,6 +39,22 @@ services:
       MYSQL_PASSWORD: 'wordpress_password'
     volumes:
       - ./mysql-data:/var/lib/mysql
+    networks:
+      - wordpress-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: wordpress_user
+      PMA_PASSWORD: wordpress_password
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "8082:80"
+    depends_on:
+      - db
     networks:
       - wordpress-network
 
