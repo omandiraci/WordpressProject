@@ -32,21 +32,21 @@ php:
     - ./php-errors:/var/log        # PHP hata logları
   environment:                      # Ortam değişkenleri
     - WORDPRESS_DB_HOST=db
-    - WORDPRESS_DB_USER=egitimarastirma_user
-    - WORDPRESS_DB_PASSWORD=xxx
-    - WORDPRESS_DB_NAME=egitimarastirma_db
+    - WORDPRESS_DB_USER=wordpress_user
+    - WORDPRESS_DB_PASSWORD=wordpress_password
+    - WORDPRESS_DB_NAME=wordpress_db
 ```
 
 ### 1.3. MariaDB (Database) Servisi
 ```yaml
 db:
-  image: mariadb:10.6           # Alpine tabanlı MariaDB imajı
+  image: mariadb:10.6           # MariaDB imajı
   container_name: mariadb
   environment:                   # Veritabanı ayarları
-    MYSQL_ROOT_PASSWORD: xxx
-    MYSQL_DATABASE: xxx
-    MYSQL_USER: xxx
-    MYSQL_PASSWORD: xxx
+    MYSQL_ROOT_PASSWORD: root_password
+    MYSQL_DATABASE: wordpress_db
+    MYSQL_USER: wordpress_user
+    MYSQL_PASSWORD: 'wordpress_password'
   volumes:
     - ./mysql-data:/var/lib/mysql  # Veritabanı kalıcı depolama
 ```

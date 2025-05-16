@@ -20,7 +20,7 @@ Projeyi çalıştırmak için aşağıdaki yazılımların bilgisayarınızda ku
 
 1. Projeyi bilgisayarınıza klonlayın:
 ```bash
-git clone https://github.com/omandiraci/AlpineWordpressProject.git
+git clone ttps://github.com/omandiraci/WordpressProject.git
 ```
 
 2. Proje dizinine gidin ve konteynerleri başlatın:
@@ -46,7 +46,7 @@ Bu proje, Alpine tabanlı Docker imajlarını kullanmaktadır. Alpine imajları,
 
 - Nginx: `nginx:alpine`
 - PHP-FPM: `php:8.1-fpm-alpine`
-- MariaDB: `mariadb:10.6-alpine`
+- MariaDB: `mariadb:10.6`
 
 ## Katkıda Bulunma
 
