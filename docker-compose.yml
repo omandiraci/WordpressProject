@@ -39,6 +39,8 @@ services:
       MYSQL_PASSWORD: 'wordpress_password'
     volumes:
       - ./mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306" 
     networks:
       - wordpress-network
 
@@ -59,7 +61,7 @@ services:
       - wordpress-network
 
   portainer:
-    image: portainer/portainer-ce:latest
+    image: portainer/portainer-ce
     container_name: portainer
     restart: unless-stopped
     security_opt:
