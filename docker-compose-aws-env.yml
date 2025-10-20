@@ -1,6 +1,7 @@
 services:
   nginx:
     image: nginx:alpine
+    container_name: wordpress_nginx
     ports:
       - "80:80"
       - "443:443"
@@ -21,6 +22,7 @@ services:
     build:
       context: .
       dockerfile: php.Dockerfile
+    container_name: wordpress_php
     volumes:
       - ./wordpress:/var/www/html
       - ./php-errors:/var/log
@@ -32,7 +34,7 @@ services:
 
   db:
     image: mariadb:10.6
-    container_name: mariadb
+    container_name: wordpress_db
     env_file:
       - ./wordpress.env
     volumes:
@@ -44,7 +46,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
-    container_name: phpmyadmin
+    container_name: wordpress_phpmyadmin
     env_file:
       - ./wordpress.env
     environment:
@@ -58,7 +60,7 @@ services:
 
   portainer:
     image: portainer/portainer-ce:latest
-    container_name: portainer
+    container_name: wordpress_portainer
     restart: unless-stopped
     security_opt:
       - no-new-privileges:true
