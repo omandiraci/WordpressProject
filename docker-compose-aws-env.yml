@@ -3,7 +3,7 @@ services:
     image: nginx:alpine
     container_name: wordpress_nginx
     ports:
-      - "80:80"
+      - "8081:80"
       - "443:443"
     volumes:
       - ./wordpress:/var/www/html
@@ -52,6 +52,9 @@ services:
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
+    ports:
+      - "8082:80"   # phpMyAdmin HTTP erişimi
+      - "8443:443"  # phpMyAdmin HTTPS erişimi (isteğe bağlı)
     networks:
       - wordpress-network
     depends_on:
