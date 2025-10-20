@@ -1,9 +1,6 @@
-version: '3.8'
-
 services:
   nginx:
     image: nginx:alpine
-    container_name: nginx
     ports:
       - "80:80"
       - "443:443"
@@ -24,23 +21,11 @@ services:
     build:
       context: .
       dockerfile: php.Dockerfile
-    container_name: php
     volumes:
       - ./wordpress:/var/www/html
       - ./php-errors:/var/log
-    environment:
-      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
-      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
-      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
-      WORDPRESS_AUTH_KEY: ${WORDPRESS_AUTH_KEY}
-      WORDPRESS_SECURE_AUTH_KEY: ${WORDPRESS_SECURE_AUTH_KEY}
-      WORDPRESS_LOGGED_IN_KEY: ${WORDPRESS_LOGGED_IN_KEY}
-      WORDPRESS_NONCE_KEY: ${WORDPRESS_NONCE_KEY}
-      WORDPRESS_AUTH_SALT: ${WORDPRESS_AUTH_SALT}
-      WORDPRESS_SECURE_AUTH_SALT: ${WORDPRESS_SECURE_AUTH_SALT}
-      WORDPRESS_LOGGED_IN_SALT: ${WORDPRESS_LOGGED_IN_SALT}
-      WORDPRESS_NONCE_SALT: ${WORDPRESS_NONCE_SALT}
+    env_file:
+      - ./wordpress.env
     networks:
       - wordpress-network
     restart: unless-stopped
@@ -48,11 +33,8 @@ services:
   db:
     image: mariadb:10.6
     container_name: mariadb
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
-      MYSQL_USER: ${WORDPRESS_DB_USER}
-      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+    env_file:
+      - ./wordpress.env
     volumes:
       - ./mysql-data:/var/lib/mysql
     networks:
@@ -63,12 +45,11 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     container_name: phpmyadmin
+    env_file:
+      - ./wordpress.env
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
-      PMA_USER: ${WORDPRESS_DB_USER}
-      PMA_PASSWORD: ${WORDPRESS_DB_PASSWORD}
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     networks:
       - wordpress-network
     depends_on:
