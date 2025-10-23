@@ -1,0 +1,27 @@
+.DS_Store
+
+# Environment files with sensitive data
+wordpress.env
+*.env
+
+# WordPress data
+wordpress/wp-config.php
+wordpress/wp-content/uploads/
+wordpress/wp-content/cache/
+
+# Database data
+mysql-data/
+
+# Logs
+nginx-logs/
+php-errors/
+
+# SSL certificates
+ssl/
+
+# Portainer data
+portainer-data/
+
+# Backup files
+*.backup
+*.bak
