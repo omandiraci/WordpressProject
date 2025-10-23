@@ -40,6 +40,7 @@ cp wordpress.env.example wordpress.env
 
 - **Güçlü şifreler** oluşturun
 - **WordPress Security Keys** oluşturmak için: https://api.wordpress.org/secret-key/1.1/salt/
+- **ÖNEMLİ**: Security keys'teki `$` karakterlerini `$$` ile değiştirin (Docker Compose uyumluluğu için)
 
 ### 4. Container'ları Başlatın
 
